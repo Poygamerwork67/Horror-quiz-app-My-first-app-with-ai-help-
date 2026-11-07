@@ -1,0 +1,19 @@
+{
+  "name": "Horror Player Quiz",
+  "short_name": "Horror Quiz",
+  "description": "What kind of player are you in horror games? A Roblox horror quiz.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#10151a",
+  "theme_color": "#10151a",
+  "icons": [
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What Kind of Player Are You in Horror Games?</title>
+<meta name="theme-color" content="#10151a">
+<meta name="description" content="ตอบ 10 ข้อ รู้เลยว่าคุณเป็นผู้เล่นสายไหนในเกมสยองขวัญ | 10 quick questions: are you the brave one, the screamer, the joker or the explorer?">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Horror Player Quiz">
+<meta property="og:title" content="What Kind of Player Are You in Horror Games?">
+<meta property="og:description" content="ตอบ 10 ข้อ รู้เลยว่าคุณเป็นผู้เล่นสายไหนในเกมสยองขวัญ | 10 quick questions: are you the brave one, the screamer, the joker or the explorer?">
+<meta property="og:url" content="https://horror-player-quizbypoy.nrbdiyunyaw.workers.dev/?v=2">
+<meta property="og:image" content="https://horror-player-quizbypoy.nrbdiyunyaw.workers.dev/og-image.png?v=2">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Camcorder screen asking what kind of player you are in horror games, with four player types: Brave, Scared, Joker, Explorer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Kind of Player Are You in Horror Games?">
+<meta name="twitter:image" content="https://horror-player-quizbypoy.nrbdiyunyaw.workers.dev/og-image.png?v=2">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Big+Shoulders+Display:wght@800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#10151a; --panel:#18222a; --line:#3a4a55; --text:#e9e5d6; --muted:#a3b3b9;
+  --rec:#e8402f; --accent:#8ec9d6; --accent-ink:#0b1a1f;
+  color-scheme:dark; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10151a;}}
+:root[data-theme="dark"]{--bg:#10151a;}
+html{scroll-padding-top:env(safe-area-inset-top,0px); background:var(--bg);}
+*,*::before,*::after{box-sizing:border-box;}
+body{
+  margin:0; min-height:100vh; color:var(--text);
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  line-height:1.5;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.028) 0 1px,transparent 1px 3px),
+    radial-gradient(ellipse at 50% 40%,transparent 45%,rgba(0,0,0,.5) 100%),
+    var(--bg);
+  background-attachment:fixed;
+}
+.wrap{max-width:560px; margin:0 auto; padding:18px 18px 48px;}
+.hud{position:relative; display:flex; justify-content:space-between; align-items:center; font-size:1rem; font-weight:700; margin-bottom:22px; z-index:5;}
+.hl{display:flex; align-items:center; gap:14px;}
+.tools{display:flex; gap:6px;}
+.pop{position:relative;}
+.tool{display:grid; place-items:center; height:34px; min-width:34px; padding:0 8px; font:inherit; font-size:.82rem; font-weight:700; color:var(--text); background:var(--panel); border:1px solid var(--line); border-radius:3px; cursor:pointer;}
+.tool:hover{border-color:var(--text);}
+.tool svg{width:18px; height:18px;}
+.tool:focus-visible,.mi:focus-visible,.modal button:focus-visible,.modal textarea:focus-visible{outline:3px solid var(--accent); outline-offset:2px;}
+.menu{position:absolute; right:0; top:calc(100% + 6px); min-width:250px; max-height:75vh; overflow-y:auto; background:var(--panel); border:1px solid var(--text); border-radius:3px; padding:4px; box-shadow:0 8px 24px rgba(0,0,0,.5);}
+.menu[hidden],.modal[hidden]{display:none;}
+.mi{display:flex; justify-content:space-between; gap:16px; width:100%; min-height:42px; align-items:center; text-align:left; font:inherit; font-size:.98rem; color:var(--text); background:none; border:0; border-radius:2px; padding:8px 12px; cursor:pointer;}
+.mi:hover{background:var(--line);}
+.mi[aria-current="true"]{color:var(--accent); font-weight:700;}
+.modal{position:fixed; inset:0; z-index:30; display:flex; align-items:center; justify-content:center; padding:18px; background:rgba(0,0,0,.72);}
+.mbox{width:100%; max-width:460px; background:var(--panel); border:1px solid var(--text); border-radius:3px; padding:22px;}
+.mbox h3{margin:0 0 6px; font-size:1.25rem;}
+.mbox p{margin:0 0 12px; color:var(--muted);}
+.mbox textarea{width:100%; min-height:130px; resize:vertical; font:inherit; color:var(--text); background:var(--bg); border:1px solid var(--line); border-radius:3px; padding:12px;}
+.mrow{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;}
+.btn.alt{background:none; color:var(--text); border:1px solid var(--line);}
+.fbs{min-height:1.5em; margin:10px 0 0; color:var(--accent);}
+.rec{display:flex; align-items:center; gap:8px;}
+.dot{width:12px; height:12px; border-radius:50%; background:var(--rec); animation:blink 1.6s steps(1) infinite;}
+@keyframes blink{0%,60%{opacity:1}61%,100%{opacity:.15}}
+.tc{font-variant-numeric:tabular-nums; color:var(--muted); letter-spacing:.04em;}
+h1,h2.big{
+  font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; font-weight:900;
+  line-height:.95; margin:0; letter-spacing:.005em;
+}
+.frame{
+  position:relative; padding:34px 24px 30px; margin-top:6px;
+  background:
+    linear-gradient(var(--text),var(--text)) top left/26px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) top left/2px 26px no-repeat,
+    linear-gradient(var(--text),var(--text)) top right/26px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) top right/2px 26px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom left/26px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom left/2px 26px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom right/26px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom right/2px 26px no-repeat;
+}
+h1{font-size:clamp(3rem,15vw,4.6rem); margin-bottom:18px;}
+.lead{color:var(--muted); font-size:1.1rem; margin:0 0 26px; max-width:38ch;}
+.btn{
+  font:inherit; font-weight:700; font-size:1.05rem; cursor:pointer;
+  background:var(--text); color:#10151a; border:0; border-radius:3px;
+  padding:14px 26px; min-height:52px;
+}
+.btn:active{transform:translateY(1px);}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--accent); outline-offset:3px;}
+.foot{color:var(--muted); font-size:.92rem; margin:30px 0 0;}
+.meta{color:var(--muted); font-size:.98rem; margin-bottom:8px;}
+.segs{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:5px; margin-bottom:24px;}
+.seg{height:6px; background:var(--line); border-radius:1px;}
+.seg.done{background:var(--text);}
+.seg.now{background:var(--rec);}
+.q{font-size:1.3rem; font-weight:700; line-height:1.35; margin:0 0 20px;}
+.opts{display:flex; flex-direction:column; gap:10px;}
+.opt{
+  display:flex; align-items:flex-start; gap:14px; width:100%; text-align:left;
+  font:inherit; color:var(--text); background:var(--panel);
+  border:1px solid var(--line); border-radius:3px; padding:14px 16px; min-height:58px; cursor:pointer;
+}
+.opt:hover{border-color:var(--text);}
+.ltr{
+  flex:none; width:28px; height:28px; border-radius:2px; display:grid; place-items:center;
+  border:1px solid var(--muted); color:var(--muted); font-weight:700; font-size:.9rem;
+}
+.opt.picked{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);}
+.opt.picked .ltr{border-color:var(--accent-ink); color:var(--accent-ink);}
+.kind{color:var(--muted); margin:0 0 8px; font-size:1.05rem;}
+.res{font-size:clamp(3.4rem,17vw,5.4rem); color:var(--text); margin-bottom:6px;}
+.emo{font-size:2.6rem; line-height:1; margin:0 0 14px;}
+.desc{font-size:1.12rem; margin:0 0 12px; max-width:38ch;}
+.result .btn{margin-top:20px;}
+#app > *{animation:slideIn .32s ease both;}
+#app.leave > *{animation:slideOut .26s ease both;}
+@keyframes slideIn{from{opacity:0; transform:translateX(40px)}to{opacity:1; transform:none}}
+@keyframes slideOut{from{opacity:1; transform:none}to{opacity:0; transform:translateX(-40px)}}
+@media (prefers-reduced-motion: reduce){#app > *,#app.leave > *{animation:none !important;} .dot{animation:none;}}
+
+.team{margin:14px 0 6px; padding:12px 14px; border-left:3px solid var(--rec); background:rgba(255,255,255,.05); max-width:42ch;}
+.team b{display:block; margin-bottom:2px;}
+.team span{color:var(--muted);}
+.result .mrow{margin-top:20px;}
+.result .mrow .btn{margin-top:0;}
+.btn:disabled{opacity:.5; cursor:default;}
+.ver{position:fixed; right:calc(10px + env(safe-area-inset-right,0px)); bottom:calc(8px + env(safe-area-inset-bottom,0px)); font-size:.72rem; color:var(--muted); opacity:.45; pointer-events:none; user-select:none; z-index:1;}
+h3.ttl{display:flex; align-items:center; gap:10px;}
+.arow .k{display:inline-flex; align-items:center; gap:10px;}
+.inl{display:inline-flex; vertical-align:middle; margin:0 3px;}
+.inl svg{width:1.15em; height:1.15em;}
+.btn .ico{margin-right:8px;}
+.lbl{display:flex; align-items:center; gap:12px;}
+.ico{display:inline-flex; flex:none;}
+.ico svg{width:20px; height:20px;}
+.chev{color:var(--muted);}
+.mi.static{cursor:default;}
+.mi.static:hover{background:none;}
+.szs{display:flex; gap:4px;}
+.szs button{font:inherit; font-weight:700; min-width:38px; min-height:34px; color:var(--text); background:var(--bg); border:1px solid var(--line); border-radius:3px; cursor:pointer;}
+.szs button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);}
+.mi .tv{color:var(--muted);}
+.mi .tv.on{color:var(--accent);}
+.toast{position:fixed; left:50%; bottom:calc(46px + env(safe-area-inset-bottom,0px)); transform:translateX(-50%); max-width:86vw; background:var(--panel); color:var(--text); border:1px solid var(--text); border-radius:3px; padding:10px 16px; z-index:40; text-align:center;}
+.toast[hidden]{display:none;}
+.abt .links .btn{margin:0;}
+.hint{margin:-2px 12px 6px; color:var(--muted); font-size:.82rem; line-height:1.35;}
+a.btn{display:inline-flex; align-items:center; text-decoration:none;}
+.abt p{margin:0 0 8px;}
+.arow{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:4px 18px; padding:13px 0; border-bottom:1px solid var(--line);}
+.arow .k{font-size:1.2rem; color:var(--text);}
+.arow .v{flex:1 1 11rem; text-align:right; font-size:1.05rem; color:var(--muted);}
+.abt .fol{margin:16px 0 0; color:var(--muted);}
+.abt .links{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 4px;}
+.lw{display:inline-flex; align-items:center; gap:7px;}
+.flag{display:inline-block; flex:none; width:22px; height:15px; border-radius:2px; overflow:hidden; box-shadow:0 0 0 1px rgba(255,255,255,.28);}
+.tool[hidden]{display:none;}
+@media (max-width:420px){.tools{gap:5px;} .tool{min-width:34px; padding:0 6px;} #langBtn .lw{gap:5px;} #langBtn .lw span:nth-child(2){display:none;}}
+@media (max-width:350px){.wrap{padding-left:12px; padding-right:12px;} .hl{gap:8px;} .hud{font-size:.9rem;} .tools{gap:4px;} .tool{min-width:32px; padding:0 5px;}}
+.tool.inst{color:var(--accent); border-color:var(--accent);}
+.tool .flag svg,.flag svg{display:block; width:100%; height:100%;}
+.tool .car{width:12px; height:12px; flex:none; transition:transform .2s ease;}
+.tool[aria-expanded="true"] .car{transform:rotate(180deg);}
+@media (prefers-reduced-motion: reduce){.tool .car{transition:none;}}
+#langMenu{min-width:190px;}
+.menu{transform-origin:top right;}
+.menu:not([hidden]){animation:menuIn .34s cubic-bezier(.2,.9,.25,1.1) both;}
+.menu.out{animation:menuOut .15s ease-in both;}
+@keyframes menuIn{from{opacity:0; transform:translateY(-16px) scale(.88); clip-path:inset(0 0 100% 0 round 3px);}to{opacity:1; transform:none; clip-path:inset(0 0 0 0 round 3px);}}
+@keyframes menuOut{from{opacity:1; transform:none;}to{opacity:0; transform:translateY(-8px) scale(.96);}}
+@keyframes itemIn{from{opacity:0; transform:translateX(26px);}to{opacity:1; transform:none;}}
+@keyframes flagPop{0%{opacity:0; transform:scale(.3) rotate(-18deg);}70%{transform:scale(1.18) rotate(4deg);}100%{opacity:1; transform:none;}}
+#langMenu:not(.out) .mi .flag{animation:flagPop .45s cubic-bezier(.3,1.4,.5,1) both;}
+#langMenu:not(.out) .mi:nth-child(1) .flag{animation-delay:.16s;}
+#langMenu:not(.out) .mi:nth-child(2) .flag{animation-delay:.26s;}
+#langMenu:not(.out) .mi{animation:itemIn .36s cubic-bezier(.2,1.2,.4,1) both;}
+#langMenu:not(.out) .mi:nth-child(1){animation-delay:.10s;}
+#langMenu:not(.out) .mi:nth-child(2){animation-delay:.20s;}
+@media (prefers-reduced-motion: reduce){.menu:not([hidden]),.menu.out,#langMenu .mi,#langMenu .mi .flag{animation:none !important;}}
+.inv{position:relative; padding:18px 16px 18px; margin:8px 0 14px; animation:focusPull .5s cubic-bezier(.2,.8,.2,1) both;
+  background:
+    linear-gradient(var(--text),var(--text)) top left/18px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) top left/2px 18px no-repeat,
+    linear-gradient(var(--text),var(--text)) top right/18px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) top right/2px 18px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom left/18px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom left/2px 18px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom right/18px 2px no-repeat,
+    linear-gradient(var(--text),var(--text)) bottom right/2px 18px no-repeat,
+    var(--bg);}
+@keyframes focusPull{from{opacity:0; filter:blur(6px); transform:scale(1.05);}to{opacity:1; filter:none; transform:none;}}
+.inv .rec{font-size:.9rem; font-weight:700; color:var(--muted);}
+.inv .rec .dot{width:10px; height:10px;}
+.inv h4{margin:12px 0 8px; font-family:"Big Shoulders Display","Arial Narrow",Impact,sans-serif; font-weight:900; font-size:2.35rem; line-height:1; color:var(--text);}
+html[lang="th"] .inv h4{font-size:1.75rem; line-height:1.25;}
+.inv .sub{margin:0 0 16px; color:var(--muted); font-size:1rem; line-height:1.45; max-width:34ch;}
+.inv .types{position:relative; display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+.inv .types .ret{position:absolute; top:-4px; bottom:-4px; left:-4px; width:calc((100% - 24px) / 4 + 8px); pointer-events:none; animation:scan 6.4s cubic-bezier(.65,0,.35,1) .9s infinite both;
+  background:
+    linear-gradient(var(--rec),var(--rec)) top left/12px 2px no-repeat, linear-gradient(var(--rec),var(--rec)) top left/2px 12px no-repeat,
+    linear-gradient(var(--rec),var(--rec)) top right/12px 2px no-repeat, linear-gradient(var(--rec),var(--rec)) top right/2px 12px no-repeat,
+    linear-gradient(var(--rec),var(--rec)) bottom left/12px 2px no-repeat, linear-gradient(var(--rec),var(--rec)) bottom left/2px 12px no-repeat,
+    linear-gradient(var(--rec),var(--rec)) bottom right/12px 2px no-repeat, linear-gradient(var(--rec),var(--rec)) bottom right/2px 12px no-repeat;}
+@keyframes scan{0%,18%{transform:translateX(0);}25%,43%{transform:translateX(100%);}50%,68%{transform:translateX(200%);}75%,93%{transform:translateX(300%);}100%{transform:translateX(0);}}
+.inv .types span{display:grid; place-items:center; height:54px; font-size:1.7rem; background:var(--panel); border:1px solid var(--line); border-radius:3px; animation:pop .35s cubic-bezier(.3,1.5,.5,1) both;}
+.inv .types span:nth-child(1){animation-delay:.30s;}
+.inv .types span:nth-child(2){animation-delay:.38s;}
+.inv .types span:nth-child(3){animation-delay:.46s;}
+.inv .types span:nth-child(4){animation-delay:.54s;}
+@keyframes pop{from{opacity:0; transform:scale(.6);}to{opacity:1; transform:none;}}
+@media (prefers-reduced-motion: reduce){.inv,.inv .types span,.inv .types .ret{animation:none !important;}}
+.btn.wide{width:100%; gap:10px; min-height:56px; font-size:1.12rem; font-weight:800;}
+.btn.wide:active,.tile:active{transform:scale(.98);}
+.ttl .av{width:30px; height:30px; flex:none; border-radius:50%; object-fit:cover; border:2px solid var(--accent);}
+.tiles{display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:8px; margin-top:10px;}
+.tile{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; min-height:78px; padding:12px 8px; font:inherit; font-size:.92rem; color:var(--text); background:var(--bg); border:1px solid var(--line); border-radius:3px; text-decoration:none; cursor:pointer;}
+.tile:hover{border-color:var(--text);}
+.tile .ico svg{width:28px; height:28px;}
+.tile.done{border-color:var(--accent); color:var(--accent);}
+.invlink{margin:10px 0 0 !important; padding:10px 12px; background:var(--bg); border:1px solid var(--line); border-radius:3px; color:var(--text) !important; word-break:break-all; white-space:pre-wrap; user-select:all;}
+.invlink[hidden]{display:none;}
+.btn.ic{display:inline-flex; align-items:center; justify-content:center;}
+.namelink{font:inherit; color:#6db8ff; background:none; border:0; padding:2px 0; cursor:pointer; text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px;}
+.namelink:hover{color:#9fd0ff;}
+.namelink:focus-visible{outline:3px solid var(--accent); outline-offset:3px;}
+.soc{display:flex; flex-direction:column; gap:10px; margin:14px 0 4px;}
+.soc a{display:flex; align-items:center; gap:14px; padding:12px 14px; background:var(--bg); border:1px solid var(--line); border-radius:3px; color:var(--text); text-decoration:none;}
+.soc a:hover{border-color:var(--text);}
+.soc a:focus-visible{outline:3px solid var(--accent); outline-offset:2px;}
+.soc .sico{flex:none; display:grid; place-items:center; width:44px; height:44px; background:var(--panel); border:1px solid var(--line); border-radius:3px;}
+.soc .sico svg{width:26px; height:26px;}
+.soc .stx{flex:1; display:flex; flex-direction:column; line-height:1.25; min-width:0;}
+.soc .stx b{font-size:1.08rem;}
+.soc .stx span{color:var(--muted); font-size:.9rem; overflow-wrap:anywhere;}
+.soc .chev svg{width:20px; height:20px;}
+.who{font-weight:700; color:var(--text); font-size:1.4rem; margin:0 0 2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hud">
+    <div class="hl"><span class="rec"><span class="dot"></span>REC</span><span class="tc" id="tc">00:00:00</span></div>
+    <div class="tools">
+      <div class="pop"><button class="tool" id="langBtn" aria-haspopup="true" aria-expanded="false"></button><div class="menu" id="langMenu" hidden></div></div>
+      <button class="tool" id="invBtn" type="button"></button>
+      <button class="tool inst" id="instBtn" type="button" hidden></button>
+      <div class="pop"><button class="tool" id="setBtn" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></button><div class="menu" id="setMenu" hidden></div></div>
+    </div>
+  </header>
+  <main id="app"></main>
+  <div class="ver" id="ver"></div>
+</div>
+<div class="toast" id="toast" hidden role="status"></div>
+<div class="modal" id="abModal" hidden role="dialog" aria-modal="true" aria-labelledby="abT">
+  <div class="mbox abt"><h3 id="abT"></h3><div id="abBody"></div><div class="mrow"><button class="btn alt" id="abClose"></button></div></div>
+</div>
+<div class="modal" id="fbModal" hidden role="dialog" aria-modal="true" aria-labelledby="fbT">
+  <div class="mbox"><h3 id="fbT"></h3><p id="fbH"></p><textarea id="fbTa" maxlength="600"></textarea><p class="fbs" id="fbS" role="status"></p>
+    <div class="mrow"><button class="btn" id="fbSend"></button><button class="btn alt" id="fbClose"></button></div></div>
+</div>
+
+<script>
+var APP_VERSION = "quiz-v0.3.6(Beta)"; // change the version here only
+var ORDER = ["brave", "scared", "joker", "explorer"];
+var QT = [
+  ["joker","scared","explorer","brave"],
+  ["explorer","joker","brave","scared"],
+  ["scared","explorer","joker","brave"],
+  ["joker","brave","explorer","scared"],
+  ["brave","scared","joker","explorer"],
+  ["explorer","brave","scared","joker"],
+  ["scared","joker","explorer","brave"],
+  ["joker","explorer","brave","scared"],
+  ["scared","brave","joker","explorer"],
+  ["brave","explorer","scared","joker"]
+];
+var SRC_QT = [
+  ["explorer","scared","brave","joker"],["scared","brave","joker","explorer"],["joker","explorer","scared","brave"],["brave","joker","explorer","scared"],
+  ["explorer","scared","brave","joker"],["scared","explorer","joker","brave"],["joker","scared","explorer","brave"],
+  ["explorer","brave","scared","joker"],["scared","joker","brave","explorer"],["explorer","scared","brave","joker"]
+];
+var ORDER_IDX = [0,1,2,3,7,4,5,6,8,9];
+var FLAGS = {
+  en: '<svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="3"/><path d="M30 0V40M0 20H60" stroke="#fff" stroke-width="13"/><path d="M30 0V40M0 20H60" stroke="#C8102E" stroke-width="8"/></svg>',
+  th: '<svg viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#A51931"/><rect y="6.67" width="60" height="26.66" fill="#F4F5F8"/><rect y="13.33" width="60" height="13.34" fill="#2D2A4A"/></svg>'
+};
+var EMOJI = { brave: "🛡️", scared: "😱", joker: "🤡", explorer: "🔍" };
+var LANG_ORDER = ["en","th"];
+var LANGS = {
+en:{ name:"English", ui:{ title:"What kind of player are you in horror games?", lead:"Answer 10 questions about scary moments. Then find out your player type!", start:"Start the quiz", foot:"A Roblox horror quiz by poygamerroblox", clip:"Clip {0} of {1}", you:"You are a", mix:"You are a mix of", again:"Play again", settings:"Settings", sound:"Sound", on:"On", off:"Off", fb:"Feedback", fbh:"What should we improve in this app?", ph:"Write your idea here", send:"Send", thanks:"Thank you! Your message was sent.", cant:"Can’t send right now. Please try again later.", close:"Close", lang:"Language" },
+  types:{ brave:["Brave Player","You are not scared of ghosts! You walk to the danger and help your friends. Everyone wants you in their team."], scared:["Scared Player","You get scared easily. You scream, run, or hide. But that is why people love to watch you play!"], joker:["Joker","You make jokes when a ghost comes. Your friends are not scared because you make them laugh."], explorer:["Explorer","You want to know everything! You look in every room and find new things. You are curious, not scared."] },
+  q:[
+  ["A ghost appears for a second and then disappears. For example, someone is behind you and then is gone, or a ghost is in front of you and then goes away. What do you do?","Go look at where it disappeared","Scream and run away from that place","Stay calm and keep going","Say, “Hello? Come back!” in a funny way"],
+  ["A ghost is walking toward you. What do you do?","Run away or hide behind something","Stand still and look at it. I am not afraid","Make a joke or dance","Watch it closely to learn what it does"],
+  ["You hear a strange sound from a dark room. What do you do?","Make a joke to the ghost","Walk in slowly and look for clues","Run away right now","Go in first so my friends are safe"],
+  ["You see a door with a sign: “Do Not Open.” What do you do?","Open it right away. I am not afraid","Laugh and say, “Great idea, sign!”","Look for clues about what is inside, then open it slowly","Run away from it"],
+  ["The lights go out. What do you do first?","Turn on my flashlight and look around","Scream and hide in a corner","Stay calm and walk forward","Say, “Who turned off the lights?” in a funny voice"],
+  ["You are alone in a big, scary house. What do you do first?","Go to the front door and leave","Walk around the house and look in every room","Go to the living room and talk to the ghost like a friend","Go to the place that looks the most dangerous, where a ghost may be"],
+  ["Your friend is scared. What do you say?","“Let me tell you a funny story!”","“Let’s get out of here!”","“Let’s check this place together.”","“Follow me. I will go first.”"]] },
+th:{ name:"ไทย", ui:{ title:"คุณเป็นผู้เล่นแบบไหนในเกมสยองขวัญ?", lead:"ตอบ 10 คำถามเกี่ยวกับช่วงน่ากลัว แล้วดูว่าคุณเป็นผู้เล่นประเภทไหน!", start:"เริ่มทำควิซ", foot:"ควิซเกมสยองขวัญ Roblox โดย poygamerroblox", clip:"คลิปที่ {0} จาก {1}", you:"คุณคือ", mix:"คุณคือส่วนผสมของ", again:"เล่นอีกครั้ง", settings:"การตั้งค่า", sound:"เสียง", on:"เปิด", off:"ปิด", fb:"ข้อเสนอแนะ", fbh:"อยากให้ปรับปรุงอะไรในแอปนี้?", ph:"พิมพ์ความคิดเห็นที่นี่", send:"ส่ง", thanks:"ขอบคุณ! ส่งเรียบร้อยแล้ว", cant:"ตอนนี้ส่งไม่ได้ ลองใหม่ภายหลัง", close:"ปิด", lang:"ภาษา" },
+  types:{ brave:["ผู้เล่นสายกล้า","คุณไม่กลัวผี! คุณเดินเข้าหาอันตรายและช่วยเพื่อนๆ ใครๆ ก็อยากได้คุณเข้าทีม"], scared:["ผู้เล่นขี้กลัว","คุณขวัญอ่อนง่าย ชอบกรี๊ด วิ่งหนี หรือหลบ แต่คนก็เลยชอบดูคุณเล่น!"], joker:["สายฮา","พอผีมา คุณก็เล่นมุก เพื่อนๆ เลยไม่กลัวเพราะคุณทำให้หัวเราะ"], explorer:["นักสำรวจ","คุณอยากรู้ไปหมด! ส่องทุกห้องแล้วเจอของใหม่ๆ คุณแค่อยากรู้ ไม่ได้กลัว"] },
+  q:[
+  ["ผีโผล่มาแวบเดียวแล้วหายไป เช่น มีคนอยู่ข้างหลังแล้วหายไป หรือผีอยู่ตรงหน้าแล้วหายไป คุณจะทำอะไร","เดินไปดูตรงที่มันหายไป","กรี๊ดแล้ววิ่งหนีออกจากตรงนั้น","ใจเย็นแล้วเดินต่อ","พูดกวนๆ ว่า “ฮัลโหล? กลับมาก่อนสิ!”"],
+  ["ผีกำลังเดินมาหาคุณ คุณจะทำอะไร","วิ่งหนีหรือแอบหลังอะไรสักอย่าง","ยืนนิ่งๆ แล้วมองมัน ฉันไม่กลัว","เล่นมุกหรือเต้น","จ้องดูใกล้ๆ ว่ามันทำอะไร"],
+  ["คุณได้ยินเสียงแปลกๆ จากห้องมืด คุณจะทำอะไร","เล่นมุกใส่ผี","ค่อยๆ เดินเข้าไปหาเบาะแส","วิ่งหนีเดี๋ยวนี้","เข้าไปก่อน เพื่อให้เพื่อนปลอดภัย"],
+  ["คุณเห็นประตูที่มีป้าย “ห้ามเปิด” คุณจะทำอะไร","เปิดเลย ฉันไม่กลัว","หัวเราะแล้วพูดว่า “ไอเดียดีจริงๆ ป้าย!”","หาเบาะแสว่าข้างในมีอะไร แล้วค่อยๆ เปิด","วิ่งหนีไป"],
+  ["ถ้าเกิดจู่ๆ ไฟดับ คุณจะทำอะไรก่อน","เปิดไฟฉายแล้วมองไปรอบๆ","กรี๊ดแล้วหลบมุม","ใจเย็นแล้วเดินไปข้างหน้า","พูดเสียงตลกๆ ว่า “ใครปิดไฟเนี่ย?”"],
+  ["คุณอยู่คนเดียวในบ้านหลังใหญ่ที่น่ากลัว คุณจะทำอะไรก่อน","เดินไปที่ประตูหน้าแล้วออกไป","เดินสำรวจบ้านและดูทุกห้อง","ไปห้องนั่งเล่นแล้วคุยกับผีเหมือนเพื่อน","ไปที่ที่ดูอันตรายที่สุด ที่น่าจะมีผี"],
+  ["เพื่อนของคุณกลัว คุณจะพูดว่าอะไร","“เดี๋ยวเล่าเรื่องตลกให้ฟัง!”","“ไปจากที่นี่กันเถอะ!”","“มาสำรวจที่นี่ด้วยกันนะ”","“ตามฉันมา ฉันไปก่อนเอง”"]] }
+};
+
+var EXTRA = {
+en:[["You are walking, and suddenly the lights start to flicker. What do you do?","Stop and look around to find out why","Keep walking. I am not afraid of a little flicker","Scream and run back the way I came","Say, “Disco time!” and dance in the flickering light"],
+ ["You see the exit door, but a monster is standing near it. What do you do?","Hide and wait until the monster goes away","Throw something to make a noise and make a funny joke","Run straight to the door","Watch how the monster moves, then find a safe way"],
+ ["You find an old key on the floor in a dark hall. What do you do?","Pick it up and look for the door it opens","Leave it. It looks like a trap","Take it and open the scariest door right now","Pretend it is a microphone and sing into it"]],
+th:[["ระหว่างเดินอยู่ จู่ๆ ไฟก็กะพริบขึ้นมา คุณจะทำอะไร","หยุดแล้วมองรอบๆ เพื่อหาสาเหตุ","เดินต่อ ฉันไม่กลัวแค่ไฟกะพริบ","กรี๊ดแล้ววิ่งกลับทางเดิม","พูดว่า “ถึงเวลาดิสโก้!” แล้วเต้นท่ามกลางแสงกะพริบ"],
+ ["คุณเห็นประตูทางออก แต่มีสัตว์ประหลาดยืนอยู่ใกล้ๆ คุณจะทำอะไร","แอบรอจนกว่าสัตว์ประหลาดจะไปที่อื่น","ขว้างของให้เกิดเสียงแล้วพูดมุกตลก","วิ่งตรงไปที่ประตู","ดูว่าสัตว์ประหลาดขยับยังไง แล้วหาทางที่ปลอดภัย"],
+ ["คุณเจอกุญแจเก่าบนพื้นในโถงมืด คุณจะทำอะไร","เก็บไว้แล้วไปหาประตูที่มันไขได้","ปล่อยไว้ มันดูเหมือนกับดัก","หยิบไปแล้วเปิดประตูที่น่ากลัวที่สุดเดี๋ยวนี้","แกล้งทำเป็นไมค์แล้วร้องเพลงใส่"]]
+};
+LANG_ORDER.forEach(function (code) {
+  var all = LANGS[code].q.concat(EXTRA[code]);
+  LANGS[code].q = ORDER_IDX.map(function (si, i) {
+    var item = all[si], out = [item[0]];
+    QT[i].forEach(function (t) { out.push(item[1 + SRC_QT[si].indexOf(t)]); });
+    return out;
+  });
+});
+
+var MATE = { brave: "explorer", explorer: "brave", scared: "joker", joker: "scared" };
+var SHARE = { en:"Share result", th:"แชร์ผลลัพธ์" };
+var SHARE_MSG = {
+en:{ saved:"Image saved to your device.", err:"Could not make the image. Please try again." },
+th:{ saved:"บันทึกรูปลงเครื่องแล้ว", err:"สร้างรูปไม่สำเร็จ ลองใหม่อีกครั้ง" }
+};
+var TEAM = {
+en:{ label:"Best teammate", brave:"They find the way, and you lead the team. Together you can clear any map!", explorer:"They go first, and you find the way. Together you can clear any map!", scared:"They make you laugh when it gets scary. Together every game is more fun!", joker:"They scream, and you make everyone laugh. Together every game is more fun!" },
+th:{ label:"เพื่อนร่วมทีมที่เข้ากัน", brave:"เขาหาทางให้ และคุณนำทีม ไปด้วยกันผ่านแมพไหนก็ได้!", explorer:"เขาเดินนำหน้า และคุณหาทาง ไปด้วยกันผ่านแมพไหนก็ได้!", scared:"เขาทำให้คุณหัวเราะตอนน่ากลัว เล่นด้วยกันสนุกกว่าเยอะ!", joker:"เขากรี๊ด และคุณทำให้ทุกคนหัวเราะ เล่นด้วยกันสนุกกว่าเยอะ!" }
+};
+var MIX = {
+en:{ roles:{ planner:"Planner", helper:"Helper", lookout:"Lookout", hider:"Hider", runner:"Runner", camera:"Camera Person" },
+  three:"You have three sides: {0}, {1}, and {2}. You can play in many ways!", missing:"They have the side you do not.",
+  pair:{
+  "brave+scared":["You walk into danger, then scream when a ghost jumps out! You are brave and scared at the same time, and that makes you exciting to watch.","planner","Makes a plan, so you know when to be brave and when to run."],
+  "brave+joker":["You walk to the danger and make jokes at the same time. Ghosts come, and you laugh at them! Your friends feel safe and have fun with you.","helper","Picks up items and helps you get back up when a joke goes wrong."],
+  "brave+explorer":["You go to the danger, and you also look at everything. You are not afraid and you are curious, so you find new places and clues first.","lookout","Watches your back while you go deep into the map."],
+  "scared+joker":["You get scared easily, but you make jokes to feel better. You scream, then you laugh! Your friends love how funny and honest you are.","hider","Knows the safest spots, so you can calm down and laugh."],
+  "scared+explorer":["You want to see every room, but you jump at every sound. You are curious and scared together, and that is a fun way to play!","runner","Pulls the monster away when you jump at a sound."],
+  "joker+explorer":["You look in every room and make jokes about everything you find. You are curious and funny, so you make exploring fun for everyone.","camera","Records your funny finds, so you can watch them again."] } },
+th:{ roles:{ planner:"นักวางแผน", helper:"ผู้ช่วย", lookout:"คนเฝ้าระวัง", hider:"คนซ่อนตัว", runner:"นักวิ่งหนี", camera:"คนถ่ายคลิป" },
+  three:"คุณมี 3 ด้าน คือ {0}, {1} และ {2} คุณเล่นได้หลายแบบ!", missing:"เขามีด้านที่คุณไม่มี",
+  pair:{
+  "brave+scared":["คุณเดินเข้าหาอันตราย แล้วกรี๊ดเมื่อผีโผล่มา! คุณทั้งกล้าและกลัวในเวลาเดียวกัน ทำให้คนดูสนุกตื่นเต้น","planner","วางแผนให้ คุณจะได้รู้ว่าเมื่อไหร่ควรกล้า เมื่อไหร่ควรวิ่ง"],
+  "brave+joker":["คุณเดินเข้าหาอันตรายและเล่นมุกไปด้วย ผีมาก็หัวเราะใส่! เพื่อนๆ รู้สึกปลอดภัยและสนุกไปกับคุณ","helper","เก็บของให้ และช่วยพยุงคุณขึ้นเมื่อมุกพลาด"],
+  "brave+explorer":["คุณเดินเข้าหาอันตราย และมองดูทุกอย่างไปด้วย คุณไม่กลัวและอยากรู้ จึงเจอที่ใหม่ๆ และเบาะแสก่อนใคร","lookout","คอยดูแลข้างหลังให้ ตอนที่คุณลุยลึกเข้าไปในแมพ"],
+  "scared+joker":["คุณขวัญอ่อนง่าย แต่เล่นมุกให้ตัวเองสบายใจ คุณกรี๊ดแล้วก็หัวเราะ! เพื่อนๆ ชอบที่คุณตลกและเป็นตัวของตัวเอง","hider","รู้จุดซ่อนที่ปลอดภัยที่สุด คุณจะได้ใจเย็นลงแล้วหัวเราะได้"],
+  "scared+explorer":["คุณอยากดูทุกห้อง แต่สะดุ้งทุกเสียง คุณทั้งอยากรู้และกลัวไปพร้อมกัน เป็นการเล่นที่สนุกดี!","runner","ล่อสัตว์ประหลาดไปทางอื่นตอนที่คุณสะดุ้งเพราะเสียง"],
+  "joker+explorer":["คุณส่องทุกห้องและเล่นมุกกับทุกอย่างที่เจอ คุณทั้งอยากรู้และตลก เลยทำให้การสำรวจสนุกสำหรับทุกคน","camera","อัดเรื่องตลกที่คุณเจอไว้ คุณจะได้เปิดดูซ้ำได้"] } }
+};
+function mixInfo(tied) {
+  var M = MIX[lang], TY = LANGS[lang].types;
+  if (tied.length === 2) {
+    var p = M.pair[tied.join("+")];
+    return { desc: p[0], mate: M.roles[p[1]], why: p[2] };
+  }
+  var names = tied.map(function (k) { return TY[k][0]; }), miss = ORDER.filter(function (k) { return tied.indexOf(k) < 0; })[0];
+  return { desc: M.three.replace("{0}", names[0]).replace("{1}", names[1]).replace("{2}", names[2]), mate: TY[miss][0], why: M.missing };
+}
+var SET = {
+en:{ fx:"Click sounds", hb:"Heartbeat sound", size:"Text size", about:"About", follow:"Follow the channel" },
+th:{ fx:"เสียงกด", hb:"เสียงหัวใจ", size:"ขนาดตัวอักษร", about:"เกี่ยวกับแอป", follow:"ติดตามช่อง" }
+};
+var ABOUT = {
+en:{ name:"App name", ver:"Version", why:"Why this app was made", text:"A quiz for fans of the poygamerroblox channel to find their horror player type. It is also my first app, built with AI as a school project." },
+th:{ name:"ชื่อแอป", ver:"เวอร์ชัน", why:"ทำไม app นี้ถึงถูกสร้างขึ้น", text:"ควิซสำหรับแฟนช่อง poygamerroblox เพื่อให้รู้ว่าตัวเองเป็นผู้เล่นสายสยองขวัญแบบไหน และเป็นแอปแรกของผมที่สร้างด้วย AI เป็นโปรเจ็กต์ของโรงเรียน" }
+};
+var MORE = {
+en:{ remember:"Remember my language", invite:"Invite friends", install:"Install the app", privacy:"Privacy", copied:"Link copied", installNow:"Install now", already:"You are already using the installed app.", pc:"Computer (Chrome)",
+  ios:"Tap Share {share}, then Add to Home Screen", and:"Tap the menu {menu}, then Install app", pcv:"Click the install icon in the address bar",
+  priv:[["Your answers","Stay on your device. They are not sent anywhere."],["Saved settings","Sound, text size, and language (only if you turn on remember language) are saved on your device."],["Feedback","Only the text you write and send is sent, to a Google Form."],["Accounts and ads","None."],["Other services","The page is hosted by Cloudflare and fonts come from Google Fonts, so they may see normal web request info like your IP address."]] },
+th:{ remember:"จำภาษาของฉัน", invite:"ชวนเพื่อน", install:"วิธีติดตั้งแอป", privacy:"ความเป็นส่วนตัว", copied:"คัดลอกลิงก์แล้ว", installNow:"ติดตั้งเลย", already:"คุณกำลังใช้แอปที่ติดตั้งแล้ว", pc:"คอมพิวเตอร์ (Chrome)",
+  ios:"กดปุ่มแชร์ {share} แล้วเลือก เพิ่มไปยังหน้าจอโฮม", and:"กดเมนู {menu} แล้วเลือก ติดตั้งแอป", pcv:"กดไอคอนติดตั้งที่แถบที่อยู่เว็บ",
+  priv:[["คำตอบของคุณ","อยู่ในเครื่องของคุณ ไม่ถูกส่งไปที่ไหน"],["การตั้งค่าที่บันทึก","เสียง ขนาดตัวอักษร และภาษา (เฉพาะเมื่อคุณเปิดจำภาษา) ถูกบันทึกไว้ในเครื่อง"],["ข้อเสนอแนะ","ส่งเฉพาะข้อความที่คุณพิมพ์และกดส่ง ไปที่ Google Form"],["บัญชีและโฆษณา","ไม่มี"],["บริการอื่น","เว็บนี้โฮสต์บน Cloudflare และฟอนต์มาจาก Google Fonts จึงอาจเห็นข้อมูลคำขอเว็บทั่วไป เช่น IP ของคุณ"]] }
+};
+var installEvt = null;
+var invBtn = document.getElementById("invBtn"), instBtn = document.getElementById("instBtn");
+var LINKS = [["YouTube", "https://www.youtube.com/@poygamerroblox"], ["TikTok", "https://www.tiktok.com/@poygameroblox4"]];
+var lang = "en";
+var state = { screen: "start", i: 0 };
+var fxOn = true, hbSound = true, sizeIdx = 1, rememberLang = false, savedLang = "en";
+var PREF_KEY = "horrorquiz-prefs-v1";
+function loadPrefs() {
+  var p = {};
+  try { p = JSON.parse(localStorage.getItem(PREF_KEY) || "{}"); } catch (e) {}
+  if (typeof p.fx === "boolean") fxOn = p.fx;
+  if (typeof p.hb === "boolean") hbSound = p.hb;
+  if (p.remember === true) { rememberLang = true; if (typeof p.lang === "string") savedLang = p.lang; }
+  if (p.size === 0 || p.size === 1 || p.size === 2) sizeIdx = p.size;
+}
+function savePrefs() {
+  try { localStorage.setItem(PREF_KEY, JSON.stringify({ fx: fxOn, hb: hbSound, size: sizeIdx, remember: rememberLang, lang: rememberLang ? lang : undefined })); } catch (e) {}
+}
+function applyPrefs() {
+  document.documentElement.style.fontSize = [80, 100, 125][sizeIdx] + "%";
+}
+var answers = [];
+var busy = false;
+var app = document.getElementById("app");
+
+function T(k) { return LANGS[lang].ui[k]; }
+function el(tag, cls, text) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined) n.textContent = text;
+  return n;
+}
+
+/* ---------- camcorder sounds ---------- */
+var actx;
+function ac() {
+  if (!actx) { var C = window.AudioContext || window.webkitAudioContext; if (C) actx = new C(); }
+  if (actx && actx.state === "suspended") actx.resume();
+  return actx;
+}
+function tone(f, at, d, v, type) {
+  var c = ac(); if (!c) return;
+  var o = c.createOscillator(), g = c.createGain(), s = c.currentTime + at;
+  o.type = type || "square"; o.frequency.value = f;
+  g.gain.setValueAtTime(v, s); g.gain.exponentialRampToValueAtTime(0.0001, s + d);
+  o.connect(g); g.connect(c.destination); o.start(s); o.stop(s + d + 0.02);
+}
+function sfx(kind) {
+  if (!fxOn) return;
+  if (kind === "rec") { tone(1100, 0, 0.07, 0.06); tone(1650, 0.1, 0.1, 0.06); }
+  else if (kind === "pick") { tone(160, 0, 0.04, 0.14); tone(1400, 0.04, 0.07, 0.05); }
+  else if (kind === "stop") { tone(700, 0, 0.1, 0.06); tone(440, 0.14, 0.26, 0.06); }
+}
+
+/* ---------- timecode ---------- */
+var t0 = Date.now();
+function pad(n) { return (n < 10 ? "0" : "") + n; }
+setInterval(function () {
+  var s = Math.floor((Date.now() - t0) / 1000);
+  document.getElementById("tc").textContent = pad(Math.floor(s / 3600)) + ":" + pad(Math.floor(s / 60) % 60) + ":" + pad(s % 60);
+}, 1000);
+
+/* ---------- screens ---------- */
+/* ---------- heartbeat ---------- */
+var hbOn = false, hbTimer = null, hbBpm = 60;
+function thump() { if (!hbSound) return; tone(95, 0, 0.16, 0.28, "sine"); tone(190, 0, 0.07, 0.07, "triangle"); tone(75, 0.2, 0.15, 0.22, "sine"); tone(150, 0.2, 0.06, 0.05, "triangle"); }
+function hbLoop() { if (!hbOn) return; thump(); hbTimer = setTimeout(hbLoop, 60000 / hbBpm); }
+function startHb() { if (hbOn) return; hbOn = true; hbLoop(); }
+function stopHb() { hbOn = false; clearTimeout(hbTimer); }
+document.addEventListener("visibilitychange", function () {
+  if (document.hidden) stopHb();
+  else if (state.screen === "q") startHb();
+});
+
+/* ---------- shuffled deck ---------- */
+function shuffle(a) {
+  for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+  return a;
+}
+var deck = [];
+function newDeck() {
+  deck = shuffle(QT.map(function (_, i) { return i; })).map(function (q) { return { q: q, o: shuffle([0, 1, 2, 3]) }; });
+}
+
+/* ---------- share card ---------- */
+var cardFile = null, cardToken = 0;
+var FS = '"Atkinson Hyperlegible","Noto Sans Thai","Noto Sans JP","Noto Sans SC",system-ui,sans-serif';
+var HS = '"Big Shoulders Display","Noto Sans Thai","Noto Sans JP","Noto Sans SC","Arial Narrow",sans-serif';
+function wrapLines(g, text, maxW) {
+  var tokens;
+  try { tokens = Array.from(new Intl.Segmenter(lang, { granularity: "word" }).segment(text), function (x) { return x.segment; }); }
+  catch (e) { tokens = text.split(/(\s+)/); }
+  var lines = [], cur = "";
+  tokens.forEach(function (tk) {
+    var t = cur + tk;
+    if (g.measureText(t).width > maxW && cur) { lines.push(cur.trim()); cur = tk.replace(/^\s+/, ""); } else cur = t;
+  });
+  if (cur.trim()) lines.push(cur.trim());
+  return lines;
+}
+function drawCard(tied) {
+  var W = 1080, H = 1350, c = document.createElement("canvas");
+  c.width = W; c.height = H;
+  var g = c.getContext("2d"), TY = LANGS[lang].types, TM = TEAM[lang], ink = "#e9e5d6", muted = "#a3b3b9";
+  g.fillStyle = "#10151a"; g.fillRect(0, 0, W, H);
+  g.fillStyle = "rgba(255,255,255,0.03)";
+  for (var y = 0; y < H; y += 4) g.fillRect(0, y, W, 1.5);
+  var vg = g.createRadialGradient(W / 2, H * 0.45, H * 0.25, W / 2, H * 0.45, H * 0.8);
+  vg.addColorStop(0, "rgba(0,0,0,0)"); vg.addColorStop(1, "rgba(0,0,0,0.55)");
+  g.fillStyle = vg; g.fillRect(0, 0, W, H);
+  var m = 60, L = 100, w = 8;
+  g.fillStyle = ink;
+  [[m, m, 1, 1], [W - m, m, -1, 1], [m, H - m, 1, -1], [W - m, H - m, -1, -1]].forEach(function (p) {
+    g.fillRect(Math.min(p[0], p[0] + p[2] * L), Math.min(p[1], p[1] + p[3] * w), L, w);
+    g.fillRect(Math.min(p[0], p[0] + p[2] * w), Math.min(p[1], p[1] + p[3] * L), w, L);
+  });
+  g.textBaseline = "middle"; g.textAlign = "left";
+  g.fillStyle = "#e8402f"; g.beginPath(); g.arc(m + 56, m + 70, 16, 0, Math.PI * 2); g.fill();
+  g.fillStyle = ink; g.font = "700 40px " + FS; g.fillText("REC", m + 86, m + 70);
+  g.textAlign = "right"; g.fillStyle = muted; g.fillText(document.getElementById("tc").textContent, W - m - 56, m + 70);
+  g.textAlign = "left";
+  g.fillStyle = muted; g.font = "400 46px " + FS;
+  g.fillText(tied.length > 1 ? T("mix") : T("you"), 110, 330);
+  var name = tied.map(function (k) { return TY[k][0]; }).join(" + "), size = 200;
+  do { g.font = "900 " + size + "px " + HS; size -= 6; } while (g.measureText(name).width > W - 220 && size > 60);
+  g.fillStyle = ink; g.fillText(name, 110, 330 + 40 + size * 0.62);
+  var ey = 330 + 40 + size * 0.62 + 130;
+  g.font = "110px " + FS; g.fillText(tied.map(function (k) { return EMOJI[k]; }).join(" "), 110, ey);
+  var ty = ey + 110;
+  if (tied.length === 1) {
+    g.font = "400 44px " + FS; g.fillStyle = ink;
+    wrapLines(g, TY[tied[0]][1], W - 220).slice(0, 5).forEach(function (ln, i) { g.fillText(ln, 110, ty + i * 62); });
+    g.fillStyle = "#e8402f"; g.fillRect(110, 1063, 6, 44);
+    g.fillStyle = ink; g.font = "700 40px " + FS;
+    g.fillText(TM.label + ": " + TY[MATE[tied[0]]][0], 136, 1085);
+  } else {
+    var mi = mixInfo(tied);
+    g.font = "400 44px " + FS; g.fillStyle = ink;
+    wrapLines(g, mi.desc, W - 220).slice(0, 6).forEach(function (ln, i) { g.fillText(ln, 110, ty + i * 62); });
+    var line = TM.label + ": " + mi.mate, fs2 = 40;
+    do { g.font = "700 " + fs2 + "px " + FS; fs2 -= 2; } while (g.measureText(line).width > W - 246 && fs2 > 22);
+    g.fillStyle = "#e8402f"; g.fillRect(110, 1063, 6, 44);
+    g.fillStyle = ink; g.fillText(line, 136, 1085);
+  }
+  g.fillStyle = muted; g.font = "400 32px " + FS; g.fillText(T("foot"), 110, H - 130);
+  return c;
+}
+function prepareCard(tied, done) {
+  var token = ++cardToken;
+  var ready = (document.fonts && document.fonts.load)
+    ? Promise.all([document.fonts.load('900 100px "Big Shoulders Display"'), document.fonts.load('400 40px "Atkinson Hyperlegible"'), document.fonts.load('700 40px "Atkinson Hyperlegible"')]).catch(function () {})
+    : Promise.resolve();
+  ready.then(function () {
+    if (token !== cardToken) return;
+    try {
+      drawCard(tied).toBlob(function (blob) {
+        if (!blob || token !== cardToken) return;
+        done(new File([blob], "horror-quiz-result.png", { type: "image/png" }));
+      }, "image/png");
+    } catch (e) { if (window.console) console.error(e); }
+  });
+}
+var lastTied = [];
+function saveFile(file) {
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(file); a.download = file.name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+}
+function shareCard(status) {
+  var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || "");
+  function go(file) {
+    if (mobile && navigator.canShare && navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], title: T("title") }).then(function () { status(""); }).catch(function (e) {
+        if (e && e.name === "AbortError") { status(""); return; }
+        saveFile(file); status(SHARE_MSG[lang].saved);
+      });
+    } else { saveFile(file); status(SHARE_MSG[lang].saved); }
+  }
+  if (cardFile) { go(cardFile); return; }
+  status("…");
+  try {
+    drawCard(lastTied).toBlob(function (blob) {
+      if (!blob) { status(SHARE_MSG[lang].err); return; }
+      go(new File([blob], "horror-quiz-result.png", { type: "image/png" }));
+    }, "image/png");
+  } catch (e) { status(SHARE_MSG[lang].err); }
+}
+
+/* ---------- screens ---------- */
+function showStart() {
+  state = { screen: "start", i: 0 };
+  stopHb();
+  app.innerHTML = "";
+  var f = el("section", "frame");
+  f.appendChild(el("h1", "", T("title")));
+  f.appendChild(el("p", "lead", T("lead")));
+  var b = el("button", "btn", T("start"));
+  b.onclick = function () {
+    answers = []; newDeck(); sfx("rec");
+    setTimeout(function () { if (state.screen === "q") startHb(); }, 700);
+    showQuestion(0);
+  };
+  f.appendChild(b);
+  var ft = el("p", "foot"), fo = T("foot"), nm = "poygamerroblox", at = fo.indexOf(nm);
+  if (at < 0) { ft.textContent = fo; }
+  else {
+    ft.appendChild(document.createTextNode(fo.slice(0, at)));
+    var nb = el("button", "namelink", nm);
+    nb.type = "button"; nb.onclick = function () { sfx("pick"); openCreator(); };
+    ft.appendChild(nb);
+    ft.appendChild(document.createTextNode(fo.slice(at + nm.length)));
+  }
+  f.appendChild(ft);
+  app.appendChild(f);
+}
+
+function showQuestion(i) {
+  state = { screen: "q", i: i };
+  if (deck.length !== QT.length) newDeck();
+  hbBpm = 60 + i * 8;
+  app.innerHTML = "";
+  var d = deck[i], item = LANGS[lang].q[d.q];
+  app.appendChild(el("div", "meta", T("clip").replace("{0}", i + 1).replace("{1}", QT.length)));
+  var segs = el("div", "segs");
+  for (var s = 0; s < QT.length; s++) segs.appendChild(el("div", "seg" + (s < i ? " done" : (s === i ? " now" : ""))));
+  app.appendChild(segs);
+  app.appendChild(el("h2", "q", item[0]));
+  var box = el("div", "opts");
+  for (var k = 0; k < 4; k++) (function (k) {
+    var oi = d.o[k];
+    var b = el("button", "opt");
+    b.appendChild(el("span", "ltr", "ABCD".charAt(k)));
+    b.appendChild(el("span", "", item[1 + oi]));
+    b.onclick = function () {
+      if (busy) return;
+      busy = true;
+      sfx("pick");
+      b.classList.add("picked");
+      answers[i] = QT[d.q][oi];
+      app.classList.add("leave");
+      setTimeout(function () {
+        busy = false;
+        app.classList.remove("leave");
+        if (i + 1 < QT.length) { showQuestion(i + 1); } else { stopHb(); sfx("stop"); showResult(); }
+      }, 280);
+    };
+    box.appendChild(b);
+  })(k);
+  app.appendChild(box);
+  window.scrollTo(0, 0);
+}
+
+function showResult() {
+  state = { screen: "result", i: 0 };
+  stopHb();
+  var score = { brave: 0, scared: 0, joker: 0, explorer: 0 };
+  answers.forEach(function (t) { score[t]++; });
+  var max = Math.max(score.brave, score.scared, score.joker, score.explorer);
+  var tied = ORDER.filter(function (t) { return score[t] === max; });
+  lastTied = tied;
+  var TY = LANGS[lang].types, TM = TEAM[lang];
+  app.innerHTML = "";
+  var card = el("section", "frame result");
+  card.appendChild(el("p", "kind", tied.length > 1 ? T("mix") : T("you")));
+  card.appendChild(el("h2", "big res", tied.map(function (k) { return TY[k][0]; }).join(" + ")));
+  card.appendChild(el("div", "emo", tied.map(function (k) { return EMOJI[k]; }).join(" ")));
+  if (tied.length === 1) {
+    var k0 = tied[0], t = el("div", "team");
+    card.appendChild(el("p", "desc", TY[k0][1]));
+    t.appendChild(el("b", "", TM.label + ": " + TY[MATE[k0]][0]));
+    t.appendChild(el("span", "", TM[k0]));
+    card.appendChild(t);
+  } else {
+    var mi = mixInfo(tied), tb = el("div", "team");
+    card.appendChild(el("p", "desc", mi.desc));
+    tb.appendChild(el("b", "", TM.label + ": " + mi.mate));
+    tb.appendChild(el("span", "", mi.why));
+    card.appendChild(tb);
+  }
+  var row = el("div", "mrow");
+  var status = el("p", "fbs"); status.setAttribute("role", "status");
+  var sh = el("button", "btn ic"); setBtnLabel(sh, "share", SHARE[lang]);
+  sh.onclick = function () { sfx("pick"); shareCard(function (m) { status.textContent = m; }); };
+  var again = el("button", "btn alt", T("again"));
+  again.onclick = function () { sfx("pick"); showStart(); };
+  row.appendChild(sh); row.appendChild(again);
+  card.appendChild(row); card.appendChild(status);
+  app.appendChild(card);
+  cardFile = null;
+  prepareCard(tied, function (f) { cardFile = f; });
+  window.scrollTo(0, 0);
+}
+
+/* ---------- language + settings menus ---------- */
+var langBtn = document.getElementById("langBtn"), langMenu = document.getElementById("langMenu");
+var setBtn = document.getElementById("setBtn"), setMenu = document.getElementById("setMenu");
+
+function hideMenu(m) {
+  if (m.hidden) return;
+  m.classList.add("out"); clearTimeout(m._t);
+  m._t = setTimeout(function () { m.hidden = true; m.classList.remove("out"); }, 150);
+}
+function closeMenus() {
+  hideMenu(langMenu); hideMenu(setMenu);
+  langBtn.setAttribute("aria-expanded", "false"); setBtn.setAttribute("aria-expanded", "false");
+}
+function toggleMenu(menu, btn) {
+  var open = menu.hidden || menu.classList.contains("out");
+  closeMenus();
+  if (open) { clearTimeout(menu._t); menu.classList.remove("out"); menu.hidden = false; btn.setAttribute("aria-expanded", "true"); }
+}
+function brand(inner) { return '<svg viewBox="0 0 24 24" aria-hidden="true">' + inner + '</svg>'; }
+function svg(inner) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
+var IC = {
+    sliders: svg('<line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/>'),
+    phone: svg('<rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>'),
+    tag: svg('<path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>'),
+    help: svg('<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>'),
+    user: svg('<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'),
+    send: svg('<line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>'),
+    link: svg('<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>'),
+    share: svg('<path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/>'),
+    dots: svg('<circle cx="12" cy="5" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="19" r="1.6" fill="currentColor"/>'),
+    monitor: svg('<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>'),
+    yt: brand('<rect x="0.5" y="3.5" width="23" height="17" rx="5" fill="#FF0000"/><polygon points="9.6 8.4 16 12 9.6 15.6" fill="#ffffff"/>'),
+    tt: brand('<g fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path transform="translate(-.9,-.6)" stroke="#25F4EE" d="M14 3v11.2a3.4 3.4 0 1 1-3.4-3.4M14 3c.3 2.6 2 4.2 5 4.4"/><path transform="translate(.9,.6)" stroke="#FE2C55" d="M14 3v11.2a3.4 3.4 0 1 1-3.4-3.4M14 3c.3 2.6 2 4.2 5 4.4"/><path stroke="#ffffff" d="M14 3v11.2a3.4 3.4 0 1 1-3.4-3.4M14 3c.3 2.6 2 4.2 5 4.4"/></g>'),
+    apple: brand('<path fill="#ffffff" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>'),
+    android: brand('<path d="M3.5 18A8.5 8.5 0 0 1 20.5 18Z" fill="#3DDC84"/><circle cx="9" cy="14" r="1" fill="#10151a"/><circle cx="15" cy="14" r="1" fill="#10151a"/><path d="M7.2 6.2L8.9 9.1M16.8 6.2L15.1 9.1" stroke="#3DDC84" stroke-width="1.4" stroke-linecap="round" fill="none"/>'),
+  fx: svg('<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/>'),
+  hb: svg('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"/>'),
+  size: svg('<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/>'),
+  lang: svg('<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'),
+  invite: svg('<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/>'),
+  copy: svg('<rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>'),
+  check: svg('<polyline points="20 6 9 17 4 12"/>'),
+  line: brand('<rect x="1" y="1" width="22" height="22" rx="6" fill="#06C755"/><path d="M12 4.6c-4.1 0-7.4 2.6-7.4 5.9 0 2.9 2.600 5.300 6.100 5.800.3.1.7.2.8.5.1.3 0 .8 0 1.100 0 .3-.2 1 .9.5 1.100-.5 5.700-3.400 7.800-5.800 1.300-1.500 1.200-3 1.200-3.600 0-3.300-3.300-5.900-7.400-5.900z" fill="#fff"/><text x="12" y="11.6" font-size="4.3" font-weight="800" text-anchor="middle" fill="#06C755" font-family="Arial,Helvetica,sans-serif">LINE</text>'),
+  fbk: brand('<circle cx="12" cy="12" r="11" fill="#1877F2"/><path d="M13.300 20v-6.900h2.300l.4-2.700h-2.700V8.700c0-.8.2-1.300 1.300-1.300h1.400V5c-.2 0-1.100-.1-2-.1-2 0-3.400 1.200-3.400 3.500v2H8.300v2.700h2.300V20z" fill="#fff"/>'),
+  install: svg('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>'),
+  privacy: svg('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'),
+  about: svg('<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'),
+  fb: svg('<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'),
+  chev: svg('<polyline points="9 18 15 12 9 6"/>')
+};
+function icon(name, cls) { var i = el("span", "ico" + (cls ? " " + cls : "")); i.innerHTML = IC[name]; return i; }
+function lbl(name, text) { var l = el("span", "lbl"); l.appendChild(icon(name)); l.appendChild(el("span", "", text)); return l; }
+function buildMenus() {
+  langBtn.innerHTML = '<span class="lw"><span class="flag">' + FLAGS[lang] + '</span><span>' + lang.toUpperCase() + '</span><svg class="car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>';
+  langBtn.setAttribute("aria-label", T("lang"));
+  setBtn.setAttribute("aria-label", T("settings"));
+  invBtn.innerHTML = IC.invite; invBtn.setAttribute("aria-label", MORE[lang].invite); invBtn.title = MORE[lang].invite;
+  instBtn.innerHTML = IC.install; instBtn.setAttribute("aria-label", MORE[lang].installNow); instBtn.title = MORE[lang].installNow;
+  langMenu.innerHTML = "";
+  LANG_ORDER.forEach(function (code) {
+    var b = el("button", "mi"), lw = el("span", "lw"), fl = el("span", "flag");
+    fl.innerHTML = FLAGS[code]; lw.appendChild(fl); lw.appendChild(el("span", "", LANGS[code].name)); b.appendChild(lw);
+    b.setAttribute("aria-current", code === lang ? "true" : "false");
+    b.onclick = function () { setLang(code); closeMenus(); };
+    langMenu.appendChild(b);
+  });
+  setMenu.innerHTML = "";
+  var ST = SET[lang], MR = MORE[lang];
+  function toggleItem(ic, label, val, flip) {
+    var b = el("button", "mi");
+    b.appendChild(lbl(ic, label));
+    b.appendChild(el("span", "tv" + (val ? " on" : ""), val ? T("on") : T("off")));
+    b.setAttribute("aria-pressed", val ? "true" : "false");
+    b.onclick = function () { flip(); savePrefs(); applyPrefs(); sfx("pick"); buildMenus(); };
+    setMenu.appendChild(b);
+  }
+  function linkItem(ic, label, fn) {
+    var b = el("button", "mi");
+    b.appendChild(lbl(ic, label)); b.appendChild(icon("chev", "chev"));
+    b.onclick = function () { closeMenus(); fn(); };
+    setMenu.appendChild(b);
+  }
+  toggleItem("fx", ST.fx, fxOn, function () { fxOn = !fxOn; });
+  toggleItem("hb", ST.hb, hbSound, function () { hbSound = !hbSound; });
+  var row = el("div", "mi static");
+  row.appendChild(lbl("size", ST.size));
+  var grp = el("div", "szs");
+  [["A", 0, "0.75rem"], ["A", 1, "1rem"], ["A", 2, "1.4rem"]].forEach(function (z) {
+    var zb = el("button", "", z[0]);
+    zb.style.fontSize = z[2];
+    zb.setAttribute("aria-pressed", sizeIdx === z[1] ? "true" : "false");
+    zb.setAttribute("aria-label", ST.size + " " + (z[1] + 1));
+    zb.onclick = function () { sizeIdx = z[1]; savePrefs(); applyPrefs(); sfx("pick"); buildMenus(); };
+    grp.appendChild(zb);
+  });
+  row.appendChild(grp); setMenu.appendChild(row);
+  toggleItem("lang", MR.remember, rememberLang, function () { rememberLang = !rememberLang; });
+  linkItem("invite", MR.invite, openInvite);
+  linkItem("install", MR.install, openInstall);
+  linkItem("privacy", MR.privacy, openPrivacy);
+  linkItem("about", ST.about, openAbout);
+  linkItem("fb", T("fb"), openFb);
+}
+function setLang(code) {
+  lang = code;
+  document.documentElement.lang = code;
+  document.title = T("title");
+  buildMenus(); applyFbText();
+  if (rememberLang) savePrefs();
+  if (state.screen === "start") showStart();
+  else if (state.screen === "q") showQuestion(state.i);
+  else showResult();
+}
+langBtn.onclick = function (e) { e.stopPropagation(); toggleMenu(langMenu, langBtn); };
+setBtn.onclick = function (e) { e.stopPropagation(); toggleMenu(setMenu, setBtn); };
+document.addEventListener("click", function (e) { if (!e.target.closest(".pop")) closeMenus(); });
+
+/* ---------- feedback ---------- */
+var fbModal = document.getElementById("fbModal"), fbTa = document.getElementById("fbTa"), fbS = document.getElementById("fbS");
+var fbSend = document.getElementById("fbSend"), fbClose = document.getElementById("fbClose");
+function applyFbText() {
+  setTitle(document.getElementById("fbT"), "fb", T("fb"));
+  document.getElementById("fbH").textContent = T("fbh");
+  fbTa.placeholder = T("ph"); fbTa.setAttribute("aria-label", T("fb"));
+  setBtnLabel(fbSend, "send", T("send")); fbClose.textContent = T("close");
+}
+function openFb() { fbS.textContent = ""; fbModal.hidden = false; fbTa.focus(); }
+function closeFb() { fbModal.hidden = true; setBtn.focus(); }
+fbClose.onclick = closeFb;
+fbModal.addEventListener("click", function (e) { if (e.target === fbModal) closeFb(); });
+var abModal = document.getElementById("abModal"), abClose = document.getElementById("abClose");
+function addRow(body, k, v, ic) {
+  var row = el("div", "arow"), key = el("span", "k"), val = el("span", "v");
+  if (ic) key.appendChild(icon(ic));
+  key.appendChild(el("span", "", k));
+  String(v).split(/(\{share\}|\{menu\})/).forEach(function (part) {
+    if (part === "{share}" || part === "{menu}") { var i = icon(part === "{share}" ? "share" : "dots", "inl"); val.appendChild(i); }
+    else if (part) val.appendChild(document.createTextNode(part));
+  });
+  row.appendChild(key); row.appendChild(val);
+  body.appendChild(row);
+}
+function setTitle(h, ic, text) { h.innerHTML = ""; h.className = "ttl"; h.appendChild(icon(ic)); h.appendChild(el("span", "", text)); }
+function setBtnLabel(b, ic, text) { b.innerHTML = ""; b.appendChild(icon(ic)); b.appendChild(el("span", "", text)); }
+function openInfo(title, fill, ic) {
+  var body = document.getElementById("abBody");
+  setTitle(document.getElementById("abT"), ic || "about", title);
+  body.innerHTML = "";
+  fill(body);
+  abClose.textContent = T("close");
+  abModal.hidden = false; abClose.focus();
+}
+function openAbout() {
+  var AB = ABOUT[lang];
+  openInfo(SET[lang].about, function (body) {
+    addRow(body, AB.name, "Horror quiz", "phone");
+    addRow(body, AB.ver, APP_VERSION.replace(/^quiz-v/, ""), "tag");
+    addRow(body, AB.why, AB.text, "help");
+    body.appendChild(el("p", "fol", SET[lang].follow));
+    var links = el("div", "links");
+    LINKS.forEach(function (l) {
+      var a = el("a", "btn");
+      a.appendChild(icon(l[0] === "YouTube" ? "yt" : "tt")); a.appendChild(el("span", "", l[0]));
+      a.href = l[1]; a.target = "_blank"; a.rel = "noopener noreferrer";
+      links.appendChild(a);
+    });
+    body.appendChild(links);
+  }, "about");
+}
+var AVATAR = "data:image/webp;base64,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";
+function openCreator() {
+  openInfo("poygamerroblox", function (body) {
+    body.appendChild(el("p", "fol", SET[lang].follow));
+    var box = el("div", "soc");
+    [["YouTube", "yt", "@poygamerroblox"], ["TikTok", "tt", "@poygameroblox4"]].forEach(function (c, n) {
+      var a = el("a"), ic = el("span", "sico"), tx = el("span", "stx");
+      ic.innerHTML = IC[c[1]];
+      tx.appendChild(el("b", "", c[0])); tx.appendChild(el("span", "", c[2]));
+      a.appendChild(ic); a.appendChild(tx); a.appendChild(icon("chev", "chev"));
+      a.href = LINKS[n][1]; a.target = "_blank"; a.rel = "noopener noreferrer";
+      box.appendChild(a);
+    });
+    body.appendChild(box);
+  }, "user");
+  var t = document.getElementById("abT"), ico = t.querySelector(".ico");
+  if (ico) { var im = new Image(); im.src = AVATAR; im.alt = ""; im.className = "av"; t.replaceChild(im, ico); }
+}
+function openPrivacy() {
+  var MR = MORE[lang];
+  openInfo(MR.privacy, function (body) { MR.priv.forEach(function (r, i) { addRow(body, r[0], r[1], ["phone", "sliders", "fb", "user", "lang"][i]); }); }, "privacy");
+}
+function isInstalled() {
+  return !!((window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || navigator.standalone);
+}
+function openInstall() {
+  var MR = MORE[lang];
+  openInfo(MR.install, function (body) {
+    if (isInstalled()) { body.appendChild(el("p", "", MR.already)); return; }
+    addRow(body, "iPhone/iPad (Safari)", MR.ios, "apple");
+    addRow(body, "Android (Chrome)", MR.and, "android");
+    addRow(body, MR.pc, MR.pcv, "monitor");
+    if (installEvt) {
+      var go = el("button", "btn"); setBtnLabel(go, "install", MR.installNow);
+      go.style.marginTop = "14px";
+      go.onclick = function () { closeAbout(); runInstall(); };
+      body.appendChild(go);
+    }
+  }, "install");
+}
+var toastTimer = null;
+function toast(msg) {
+  var t = document.getElementById("toast");
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { t.hidden = true; }, 2500);
+}
+function isMobile() {
+  var ua = navigator.userAgent || "";
+  return /Android|iPhone|iPad|iPod/i.test(ua) || (navigator.maxTouchPoints > 1 && /Mac/i.test(navigator.platform || ""));
+}
+function legacyCopy(u) {
+  var ok = false, t = document.createElement("textarea");
+  t.value = u; t.style.position = "fixed"; t.style.opacity = "0";
+  document.body.appendChild(t); t.select();
+  try { ok = !!document.execCommand("copy"); } catch (e) {}
+  t.remove();
+  return ok;
+}
+var INV = {
+en:{ h:"Who is the bravest in your group?", sub:"Send the quiz to your friends and compare your player types.", send:"Send invite", copy:"Copy invite", copied:"Copied", text:"I dare you! What kind of player are you in horror games? Take the quiz:" },
+th:{ h:"ใครกล้าที่สุดในกลุ่มคุณ?", sub:"ส่งควิซให้เพื่อนๆ แล้วมาเทียบกันว่าใครเป็นผู้เล่นแบบไหน", send:"ส่งคำเชิญ", copy:"คัดลอกคำเชิญ", copied:"คัดลอกแล้ว", text:"ท้าคุณเลย! คุณเป็นผู้เล่นแบบไหนในเกมสยองขวัญ? มาทำควิซกัน:" }
+};
+var SHARE_V = "2"; // raise this number when the link preview image changes, so LINE and Facebook fetch the new one
+function appUrl() { return window.location.href.split("#")[0].split("?")[0] + "?v=" + SHARE_V; }
+function doCopy(url, ok, fail) {
+  function fb() { if (legacyCopy(url)) ok(); else fail(); }
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(ok, fb);
+    else fb();
+  } catch (e) { fb(); }
+}
+function openInvite() {
+  var IV = INV[lang], url = appUrl(), canShare = isMobile() && !!navigator.share, full = IV.text + "\n" + url;
+  openInfo(MORE[lang].invite, function (body) {
+    var card = el("div", "inv");
+    var rec = el("span", "rec"); rec.appendChild(el("span", "dot")); rec.appendChild(document.createTextNode("REC"));
+    card.appendChild(rec);
+    card.appendChild(el("h4", "", IV.h));
+    card.appendChild(el("p", "sub", IV.sub));
+    var ty = el("div", "types"); ty.setAttribute("aria-hidden", "true");
+    ORDER.forEach(function (k) { ty.appendChild(el("span", "", EMOJI[k])); });
+    ty.appendChild(el("i", "ret"));
+    card.appendChild(ty);
+    body.appendChild(card);
+
+    var linkBox = el("p", "invlink", full); linkBox.hidden = true;
+    function copyTile(cls) {
+      var t = el("button", cls); t.type = "button";
+      setBtnLabel(t, "copy", IV.copy);
+      t.onclick = function () {
+        sfx("pick");
+        doCopy(full, function () {
+          t.classList.add("done"); setBtnLabel(t, "check", IV.copied); toast(MORE[lang].copied);
+          setTimeout(function () { t.classList.remove("done"); setBtnLabel(t, "copy", IV.copy); }, 2000);
+        }, function () { linkBox.hidden = false; });
+      };
+      return t;
+    }
+    if (canShare) {
+      var send = el("button", "btn wide ic"); send.type = "button";
+      setBtnLabel(send, "send", IV.send);
+      send.onclick = function () {
+        sfx("pick");
+        try {
+          navigator.share({ title: T("title"), text: IV.text, url: url }).catch(function (err) {
+            if (err && err.name !== "AbortError") linkBox.hidden = false;
+          });
+        } catch (e) { linkBox.hidden = false; }
+      };
+      body.appendChild(send);
+    } else {
+      var main = copyTile("btn wide ic"); body.appendChild(main);
+    }
+    var tiles = el("div", "tiles");
+    var msg = encodeURIComponent(full);
+    [["line", "LINE", (isMobile() ? "https://line.me/R/msg/text/?" + msg : "https://social-plugins.line.me/lineit/share?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(IV.text))],
+     ["fbk", "Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url) + "&quote=" + encodeURIComponent(IV.text)]].forEach(function (c) {
+      var a = el("a", "tile"); a.appendChild(icon(c[0])); a.appendChild(el("span", "", c[1]));
+      a.href = c[2]; a.target = "_blank"; a.rel = "noopener noreferrer";
+      tiles.appendChild(a);
+    });
+    if (canShare) tiles.appendChild(copyTile("tile"));
+    body.appendChild(tiles);
+    body.appendChild(linkBox);
+  }, "invite");
+}
+function showInstallBtn() { instBtn.hidden = !installEvt || isInstalled(); }
+function runInstall() {
+  var ev = installEvt; if (!ev) return;
+  installEvt = null; showInstallBtn(); ev.prompt();
+}
+window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); installEvt = e; showInstallBtn(); });
+window.addEventListener("appinstalled", function () { installEvt = null; showInstallBtn(); });
+invBtn.onclick = function (e) { e.stopPropagation(); closeMenus(); sfx("pick"); openInvite(); };
+instBtn.onclick = function (e) { e.stopPropagation(); closeMenus(); sfx("pick"); runInstall(); };
+function closeAbout() { abModal.hidden = true; setBtn.focus(); }
+abClose.onclick = closeAbout;
+abModal.addEventListener("click", function (e) { if (e.target === abModal) closeAbout(); });
+document.addEventListener("keydown", function (e) {
+  if (e.key !== "Escape") return;
+  if (!abModal.hidden) closeAbout(); else if (!fbModal.hidden) closeFb(); else closeMenus();
+});
+var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScfIs79QWYfr55lAGfnsh9EQH9rRDhBu7vEMO-NES_S3Bit-w/formResponse";
+var FORM_FIELD = "entry.887057364";
+fbSend.onclick = function () {
+  var v = fbTa.value.trim();
+  if (!v) { fbTa.focus(); return; }
+  fbSend.disabled = true; fbS.textContent = "…";
+  var data = new FormData();
+  data.append(FORM_FIELD, v);
+  fetch(FORM_URL, { method: "POST", mode: "no-cors", body: data })
+    .then(function () { fbS.textContent = T("thanks"); fbTa.value = ""; sfx("stop"); })
+    .catch(function () { fbS.textContent = T("cant"); })
+    .then(function () { fbSend.disabled = false; });
+};
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () { navigator.serviceWorker.register("sw.js?v=" + encodeURIComponent(APP_VERSION)).catch(function () {}); });
+}
+document.getElementById("ver").textContent = APP_VERSION;
+loadPrefs(); applyPrefs();
+setLang(rememberLang && LANGS[savedLang] ? savedLang : "en");
+</script>
+</body>
+</html>
