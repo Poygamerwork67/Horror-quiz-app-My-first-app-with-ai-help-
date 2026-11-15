@@ -3,8 +3,9 @@ HORROR PLAYER QUIZ  (v1 Full-release)
 
 
 How to play (EN)
-1.Extract the whole zip first.
-2.Double-click index.html. It opens in your browser 
+1.Download zip file in releases Menu
+2.Extract the whole zip first.
+3.Double-click index.html. It opens in your browser 
 or right click and choose "open with" and choose Microsoft Edge or google chrome.
 
 *Keep all files together in this folder:
@@ -16,8 +17,9 @@ index.html, manifest.webmanifest, sw.js, icons/icon-512.png*
 
 
 วิธีเล่นเกมนี้ (TH)
-1. แตกไฟล์ zip ทั้งหมดก่อน (คลิกขวา > Extract All / แตกไฟล์)  
-2. ดับเบิลคลิกไฟล์ index.html หรือคลิกขวาแล้วเลือก "เปิดด้วย" (Open with) จากนั้นเลือก Microsoft Edge หรือ Google Chrome"
+1.ดาวน์โหลดไฟล์ซิปในเมนู "releases"
+2.แตกไฟล์ zip ทั้งหมดก่อน (คลิกขวา > Extract All / แตกไฟล์)  
+3.ดับเบิลคลิกไฟล์ index.html หรือคลิกขวาแล้วเลือก "เปิดด้วย" (Open with) จากนั้นเลือก Microsoft Edge หรือ Google Chrome"
   
 *อย่าลบหรือย้ายไฟล์ออกจากโฟลเดอร์นี้*
 
